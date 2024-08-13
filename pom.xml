@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>CucumberDemo</groupId>
-  <artifactId>CucumberDemo</artifactId>
+  <groupId>way2automation.com</groupId>
+  <artifactId>way2automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>CucumberDemo</name>
+  <name>way2automation</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -19,10 +19,16 @@
   </properties>
 
   <dependencies>
+   <!-- <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>-->
     <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.18.1</version>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.23.1</version>
 </dependency>
 <dependency>
     <groupId>io.cucumber</groupId>
@@ -32,23 +38,14 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.8.0</version>
-    </dependency>
+    <version>7.10.1</version>
+    <!--<scope>test</scope>-->
+</dependency>
 <dependency>
     <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-core</artifactId>
+    <artifactId>cucumber-testng</artifactId>
     <version>7.18.1</version>
 </dependency>
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.23.1</version>
-</dependency>
-  	<dependency>
-  		<groupId>QADemo</groupId>
-  		<artifactId>CucumberFramework</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   </dependencies>
 
   <build>
@@ -59,6 +56,7 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
+        
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -71,12 +69,6 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
-          <configuration>
-           <systemPropertyVariables>
-                 <URL>http://www.way2automation.com/angularjs-protractor/webtables/</URL>
-            </systemPropertyVariables>
-         
-          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

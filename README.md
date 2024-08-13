@@ -1,2 +1,3 @@
 # vaishali_karande_teladoc_challange
-new repo
+
+Execute testng.xml file from suites folder to execute 2 scenarios
